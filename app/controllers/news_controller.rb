@@ -1,7 +1,7 @@
 class NewsController < ApplicationController
 
   def index
-    @entries = Entry.all.order('published desc')
+    @entries = Entry.all.order('published desc').limit(80)
     FetchFeedsJob.perform_now
   end
 
