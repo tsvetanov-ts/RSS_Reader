@@ -22,3 +22,11 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+Dockerfile
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+.idea/*
