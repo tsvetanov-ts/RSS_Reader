@@ -57,6 +57,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'feedjira'
 gem 'httparty'
 gem 'less-rails'
+gem 'sidekiq'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
 

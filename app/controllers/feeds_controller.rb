@@ -4,6 +4,7 @@ class FeedsController < ApplicationController
   # GET /feeds
   # GET /feeds.json
   def index
+    FeedWorker.perform_async
     @feeds = Feed.all
   end
 
@@ -26,9 +27,10 @@ class FeedsController < ApplicationController
   def create
     @feed = Feed.new(feed_params)
 
+
     respond_to do |format|
       if @feed.save
-        format.html { redirect_to @feed, notice: 'Feed was successfully created.' }
+        format.html { redirect_to @feed, notice: 'Feed was successfully created.'}
         format.json { render :show, status: :created, location: @feed }
       else
         format.html { render :new }

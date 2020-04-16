@@ -1,12 +1,12 @@
 class NewsController < ApplicationController
 
   def index
-    @entries = Entry.all.order(published: :desc).limit(80)
-    FetchFeedsJob.perform_now
+    FeedWorker.perform_async
+    @entries = Entry.all.order(published: :desc).limit(8000)
   end
 
   def show
-    @entry = Entry.find(params[:id])
+    @entry = Entry.find
   end
 
 end
