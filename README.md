@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Ruby on Rails RSS Reader
 
-Things you may want to cover:
+This reader was made using ruby 2.6.5 and rails 6.0.2
 
-* Ruby version
+### RSS Reader setup
 
-* System dependencies
+1. Clone master branch
 
-* Configuration
+2. Switch to ruby 2.6.5 (rbenv users can run  `rbenv local 2.6.5` and install it if necessary with `rbenv install 2.6.5`)
 
-* Database creation
+3. Set up your POSTGRES credentials (config/database.yml)
 
-* Database initialization
+4. Type `bundle install` to install dependencies
 
-* How to run the test suite
+5. Fire up rails dev server by `rails s`
 
-* Services (job queues, cache servers, search engines, etc.)
+6. Fire up redis: type `redis-server` command
 
-* Deployment instructions
+7. Fire up sidekiq: type `bundle exec sidekiq`
 
-* ...
+8. Run rspec tests by typing `rspec`
