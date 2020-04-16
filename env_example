@@ -1,0 +1,6 @@
+RSS_DB_DRIVER = postgresql
+RSS_DB_SCHEMA = rss_dev
+RSS_DB_SCHEMA_DEV = rss_dev
+RSS_DB_SCHEMA_TEST = rss_dev
+RSS_DB_USER = rss_user
+RSS_DB_PASS = rss_user

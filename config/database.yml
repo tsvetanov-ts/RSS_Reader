@@ -1,18 +1,18 @@
 default: &default
-  adapter: postgresql
+  adapter: <%= ENV['RSS_DB_DRIVER'] %>
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: RSS_Reader_development
+  database: <%= ENV['RSS_DB_SCHEMA'] %>
 
 test:
   <<: *default
-  database: RSS_Reader_test
+  database: <%= ENV['RSS_DB_SCHEMA'] %>
 
 production:
   <<: *default
-  database: RSS_Reader_production
-  username: RSS_Reader
-  password: <%= ENV['RSS_READER_DATABASE_PASSWORD'] %>
+  database: <%= ENV['RSS_DB_SCHEMA'] %>
+  username: <%= ENV['RSS_DB_USER'] %>
+  password: <%= ENV['RSS_DB_PASS'] %>

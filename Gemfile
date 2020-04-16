@@ -61,8 +61,8 @@ gem 'sidekiq'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
 
-
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'factory_bot'
   gem 'rspec-core'
   gem 'rspec-expectations'
